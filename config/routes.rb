@@ -1,4 +1,12 @@
 Ywpark::Application.routes.draw do
+  match '/about', :to => 'pages#about'
+  match '/resume', :to => 'pages#resume'
+  match '/projects', :to => 'pages#projects'
+  match '/blog', :to => 'pages#blog'
+  match '/music', :to => 'pages#music'
+  match '/contact', :to => 'pages#contact'
+	root :to => 'pages#about'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

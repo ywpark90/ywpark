@@ -2,8 +2,8 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		var w = $(window).width();
-		var w_in = (w < 1200) ? 880 : 
-								((w > 1400) ? 1080 : (880 + (w - 1200)));
+		var w_in = (w < 1100) ? 780 : 
+								((w > 1400) ? 1080 : (780 + (w - 1100)));
 		var pad = (w < 1400) ? 50 : (50 + (w - 1400) * 0.5);
 		var title_pad = (w_in - 750) * 0.5;
 
@@ -15,8 +15,8 @@
 
 	$(window).resize(function() {
 		var w = $(window).width();
-		var w_in = (w < 1200) ? 880 : 
-								((w > 1400) ? 1080 : (880 + (w - 1200)));
+		var w_in = (w < 1100) ? 780 : 
+								((w > 1400) ? 1080 : (780 + (w - 1100)));
 		var pad = (w < 1400) ? 50 : (50 + (w - 1400) * 0.5);
 		var title_pad = (w_in - 750) * 0.5;
 		

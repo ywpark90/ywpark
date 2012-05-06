@@ -1,0 +1,28 @@
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var w = $(window).width();
+		var w_in = (w < 1200) ? 880 : 
+								((w > 1400) ? 1080 : (880 + (w - 1200)));
+		var pad = (w < 1400) ? 50 : (50 + (w - 1400) * 0.5);
+		var title_pad = (w_in - 750) * 0.5;
+
+		$("#content_inside").css({"width":w_in});
+		$("#content").css({"padding-left":pad, "padding-right":pad});
+		$("#content_title").css({"padding-left":title_pad, 
+														 "padding-right":title_pad});
+	});
+
+	$(window).resize(function() {
+		var w = $(window).width();
+		var w_in = (w < 1200) ? 880 : 
+								((w > 1400) ? 1080 : (880 + (w - 1200)));
+		var pad = (w < 1400) ? 50 : (50 + (w - 1400) * 0.5);
+		var title_pad = (w_in - 750) * 0.5;
+		
+		$("#content_inside").css({"width":w_in});
+		$("#content").css({"padding-left":pad, "padding-right":pad});
+		$("#content_title").css({"padding-left":title_pad, 
+														 "padding-right":title_pad});
+	});
+</script>

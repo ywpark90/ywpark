@@ -33,6 +33,8 @@
 	margin-bottom: 0px;
 	margin-left: 0px;
 	padding: 0px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 #menu {
@@ -51,7 +53,6 @@
 	display: block;
 	background-color: #d9d6c7;
 	margin-left: 220px;
-	padding-left: 30px;
 	padding-top: 30px;
 }
 
@@ -66,6 +67,12 @@ img {
 
 a {
 	text-decoration: none;
+}
+
+.round {
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
 }
 
 
@@ -145,4 +152,16 @@ a {
 
 #menu li a:active {
 	color: #ffde00;
+}
+
+#content_title {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+#content_inside {
+	background-color: #f3f2ea;
+	height: 550px;
+	overflow: hidden;
 }

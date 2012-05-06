@@ -6,6 +6,13 @@
 		<%= render 'layouts/stylesheets' %>
 	</head>
 	<body>
-		<%= yield %>
+		<div id="wrapper">
+			<div id="wrapperinside">
+				<%= render 'layouts/menu' %>
+				<div id="content">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

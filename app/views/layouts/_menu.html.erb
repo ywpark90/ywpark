@@ -1,0 +1,18 @@
+<div id="menu">
+	<div id="menu_colorline1"></div>
+	<div id="menu_colorline2"></div>
+	<%= image_tag("menu/logo.png", :alt => "Logo", :id => "menu_logo") %>
+	<%= image_tag("menu/sectionline.png", :alt => "Section Line Top", 
+								 :class => "menu_sectionline") %>
+	<ul>
+		<li><%= link_to "ABOUT", root_path %></li>
+		<li><%= link_to "RESUME", resume_path %></li>
+		<li><%= link_to "PROJECTS", projects_path %></li>
+		<li><%= link_to "BLOG", blog_path %></li>
+		<li><%= link_to "MUSIC", music_path %></li>
+		<li><%= link_to "CONTACT", contact_path %></li>
+	</ul>
+
+	<%= image_tag("menu/sectionline.png", :alt => "Section Line Bottom", 
+								 :class => "menu_sectionline") %>
+</div>

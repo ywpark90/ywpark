@@ -197,8 +197,6 @@ a {
 	display: block;
 	padding-top: 5px;
 	padding-bottom: 10px;
-	margin-left: 20px;
-	text-align: center;
 }
 
 .icon {
@@ -263,7 +261,6 @@ a {
 }
 
 #footer p {
-	text-align: center;
 	font-size: 10px;
 	color: #494c51;
 }

@@ -1,4 +1,8 @@
 <script type="text/javascript" src="javascripts/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		var w = $(window).width();
@@ -6,11 +10,28 @@
 								((w > 1400) ? 1080 : (780 + (w - 1100)));
 		var pad = (w < 1400) ? 50 : (50 + (w - 1400) * 0.5);
 		var title_pad = (w_in - 750) * 0.5;
+		var section_pad = (w_in - 360) * 0.5;
 
-		$("#content_inside").css({"width":w_in});
+		$("#content_inside_wrapper").css({"width":w_in});
 		$("#content").css({"padding-left":pad, "padding-right":pad});
 		$("#content_title").css({"padding-left":title_pad, 
 														 "padding-right":title_pad});
+		$("#content_sectionline").css({"padding-left":section_pad, 
+														 			 "padding-right":section_pad});
+		
+		lastBlock = $("#resume_slide_al");
+		maxWidth = w_in - 335;
+		minWidth = 50;
+		$("#resume_slide ul li p").css({"width":maxWidth - 60});
+		$("#resume_slide_al").css({"width":maxWidth});
+
+		$("#resume_slide ul li a").click(function() {
+			$(lastBlock).animate({width: minWidth+"px"}, { queue:false, duration:400 });
+			$(this).animate({width: maxWidth+"px"}, { queue:false, duration:400 });
+			$(lastBlock).removeAttr('id');
+			lastBlock = this;
+			$(this).attr('id', "resume_slide_al");
+		});
 	});
 
 	$(window).resize(function() {
@@ -19,10 +40,28 @@
 								((w > 1400) ? 1080 : (780 + (w - 1100)));
 		var pad = (w < 1400) ? 50 : (50 + (w - 1400) * 0.5);
 		var title_pad = (w_in - 750) * 0.5;
+		var section_pad = (w_in - 360) * 0.5;
 		
-		$("#content_inside").css({"width":w_in});
+		$("#content_inside_wrapper").css({"width":w_in});
 		$("#content").css({"padding-left":pad, "padding-right":pad});
 		$("#content_title").css({"padding-left":title_pad, 
 														 "padding-right":title_pad});
+		$("#content_sectionline").css({"padding-left":section_pad, 
+														 			 "padding-right":section_pad});
+		
+		lastBlock = $("#resume_slide_al");
+		maxWidth = w_in - 335;
+		minWidth = 50;
+		$("#resume_slide ul li p").css({"width":maxWidth - 60});
+		$("#resume_slide_al").css({"width":maxWidth});
+
+		$("#resume_slide ul li a").click(function() {
+			$(lastBlock).animate({width: minWidth+"px"}, { queue:false, duration:400 });
+			$(this).animate({width: maxWidth+"px"}, { queue:false, duration:400 });
+			lastBlock = this;
+			$(lastBlock).removeAttr('id');
+			lastBlock = this;
+			$(this).attr('id', "resume_slide_al");
+		});
 	});
 </script>

@@ -1,3 +1,72 @@
 <%= title_img %>
-<div id="content_inside" class="round">
+<div id="content_inside_wrapper" class="round">
+	<div id="content_inside">
+		<div id="resume_slide">
+			<ul>
+				<li>
+					<a id="resume_slide_al">
+						<%= image_tag("/images/resume/resume_bar_education.png",
+							:mouseover => "/images/resume/resume_bar_education_hover.png") %>
+						<p>
+							Education
+						</p>
+					</a>
+				</li>
+
+				<li>
+					<a>
+						<%= image_tag("/images/resume/resume_bar_skills.png",
+							:mouseover => "/images/resume/resume_bar_skills_hover.png") %>
+						<p>
+							Skills
+						</p>
+					</a>
+				</li>
+	
+				<li>
+					<a>
+						<%= image_tag("/images/resume/resume_bar_work.png",
+							:mouseover => "/images/resume/resume_bar_work_hover.png") %>
+						<p>
+							Work Experience
+						</p>
+					</a>
+				</li>
+
+				<li>
+					<a>
+						<%= image_tag("/images/resume/resume_bar_projects.png",
+							:mouseover => "/images/resume/resume_bar_projects_hover.png") %>
+						<p>
+							Projects
+						</p>
+					</a>
+				</li>
+
+				<li>
+					<a>
+						<%= image_tag("/images/resume/resume_bar_awards.png",
+							:mouseover => "/images/resume/resume_bar_awards_hover.png") %>
+						<p>
+							Awards
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+		
+<%= image_tag("content/sectionline.png", :alt => "Section Line",
+					 		:id => "content_sectionline") %>
+<div id="content_sectiontext">
+	<h3>
+		KEEP A COPY OF MY RESUME
+	</h3>
+	<%= image_tag("content/pdf_logo.png", :alt => "PDF Logo",
+						 		:class => "icon") %>
+	<%= image_tag("content/word_logo.png", :alt => "WORD Logo",
+						 		:class => "icon") %>
+	<%= image_tag("content/txt_logo.png", :alt => "TXT Logo",
+						 		:class => "icon") %>
 </div>

@@ -1,5 +1,7 @@
 @charset "utf-8";
-/* CSS Document */
+/****** CSS Document ******/
+
+/****** Embedding fonts ******/
 
 @font-face {
 	font-family: 'BebasNeueRegular';
@@ -11,6 +13,15 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'MyriadPro-Semibold';
+	src: url('fonts/MyriadPro-Semibold.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/****** General ******/
 
 #wrapper {
 	padding: 0px;
@@ -35,28 +46,22 @@
 	padding: 0px;
 }
 
-#menu {
-	width: 220px;
-	height: 100%;
-	display: block;
-	float: left;
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	background-color: #494c51;
-	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
-}
-
-#content {
-	display: block;
-	background-color: #d9d6c7;
-	margin-left: 220px;
-	padding-top: 30px;
-}
-
 body {
-	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
+	font-family: 'MyriadPro-Semibold', Helvetica, sans-serif;
 	background-color: #d9d6c7;
+}
+
+h3 {
+	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
+	font-size: 18pt;
+	color: #c0bca7;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 00px;
+	display: inline;
+	vertical-align: top;
 }
 
 img {
@@ -73,9 +78,23 @@ a {
 	border-radius: 30px;
 }
 
+.hide {
+	display: none;
+}
 
+/****** Menu ******/
 
-
+#menu {
+	width: 220px;
+	height: 100%;
+	display: block;
+	float: left;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	background-color: #494c51;
+	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
+}
 
 #menu_colorline1, #menu_colorline2 {
 	width: 5px;
@@ -152,14 +171,116 @@ a {
 	color: #ffde00;
 }
 
+/****** Content ******/
+
+#content {
+	display: block;
+	background-color: #d9d6c7;
+	margin-left: 220px;
+	padding-top: 30px;
+}
+
 #content_title {
 	display: block;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-bottom: 0px;
 }
 
-#content_inside {
+#content_inside_wrapper {
 	background-color: #f3f2ea;
 	height: 550px;
+}
+
+#content_inside {
+	display: block;
+	padding: 20px;
+}
+
+#content_inside p {
+	margin: 0px;
+}
+
+#content_sectionline {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+
+#content_sectiontext {
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	margin-left: 20px;
+	text-align: center;
+}
+
+.icon {
+	display: inline;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+/****** Resume ******/
+
+#resume_slide {
+	display: block;
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+}
+
+#resume_slide ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#resume_slide ul li {
+	float: left;
+	display: block;
+	padding: 5px;
+	margin-top: 15px;
+}
+
+#resume_slide ul li a {
+	display: block;
+	float: left;
 	overflow: hidden;
+	width: 50px;
+	height: 460px;
+}
+
+#resume_slide ul li img {
+	display: block;
+	float: left;
+}
+
+#resume_slide ul li p {
+	margin-top: 30px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	padding: 0px;
+	height: 400px;
+	display: block;
+	float: left;
+}
+
+/****** Footer ******/
+
+#footer {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#footer p {
+	text-align: center;
+	font-size: 10px;
+	color: #494c51;
+}
+
+#footer span {
+	color: #ea6a19;
 }

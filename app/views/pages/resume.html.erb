@@ -1,59 +1,57 @@
 <%= title_img %>
 <div id="content_inside_wrapper" class="round">
 	<div id="content_inside">
-		<div id="resume_slide">
-			<ul>
-				<li>
-					<a id="resume_slide_al">
-						<%= image_tag("/images/resume/resume_bar_education.png",
-							:mouseover => "/images/resume/resume_bar_education_hover.png") %>
-						<p>
-							Education
-						</p>
-					</a>
-				</li>
+		<ul id="resume_accordion">
+			<li>
+				<a id="resume_accordion_sel">
+					<%= image_tag("/images/resume/resume_bar_education.png",
+						:mouseover => "/images/resume/resume_bar_education_hover.png") %>
+					<ul>
+						<li>Education</li>
+					</ul>
+				</a>
+			</li>
 
-				<li>
-					<a>
-						<%= image_tag("/images/resume/resume_bar_skills.png",
-							:mouseover => "/images/resume/resume_bar_skills_hover.png") %>
-						<p>
-							Skills
-						</p>
-					</a>
-				</li>
-	
-				<li>
-					<a>
-						<%= image_tag("/images/resume/resume_bar_work.png",
-							:mouseover => "/images/resume/resume_bar_work_hover.png") %>
-						<p>
-							Work Experience
-						</p>
-					</a>
-				</li>
+			<li>
+				<a>
+					<%= image_tag("/images/resume/resume_bar_skills.png",
+						:mouseover => "/images/resume/resume_bar_skills_hover.png") %>
+					<ul>
+						<li>Skills</li>
+					</ul>
+				</a>
+			</li>
 
-				<li>
-					<a>
-						<%= image_tag("/images/resume/resume_bar_projects.png",
-							:mouseover => "/images/resume/resume_bar_projects_hover.png") %>
-						<p>
-							Projects
-						</p>
-					</a>
-				</li>
+			<li>
+				<a>
+					<%= image_tag("/images/resume/resume_bar_work.png",
+						:mouseover => "/images/resume/resume_bar_work_hover.png") %>
+					<ul>
+						<li>Work Experience</li>
+					</ul>
+				</a>
+			</li>
 
-				<li>
-					<a>
-						<%= image_tag("/images/resume/resume_bar_awards.png",
-							:mouseover => "/images/resume/resume_bar_awards_hover.png") %>
-						<p>
-							Awards
-						</p>
-					</a>
-				</li>
-			</ul>
-		</div>
+			<li>
+				<a>
+					<%= image_tag("/images/resume/resume_bar_projects.png",
+						:mouseover => "/images/resume/resume_bar_projects_hover.png") %>
+					<ul>
+						<li>Projects</li>
+					</ul>
+				</a>
+			</li>
+
+			<li>
+				<a>
+					<%= image_tag("/images/resume/resume_bar_awards.png",
+						:mouseover => "/images/resume/resume_bar_awards_hover.png") %>
+					<ul>
+						<li>Awards</li>
+					</ul>
+				</a>
+			</li>
+		</ul>
 	</div>
 </div>
 		

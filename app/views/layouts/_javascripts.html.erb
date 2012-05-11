@@ -29,11 +29,13 @@
 		var w = $(window).width();
 		var w_in = (w < 1100) ? 780 : 
 								((w > 1400) ? 1080 : (780 + (w - 1100)));
+
 		lastBlock = $("#resume_accordion_sel");
 		maxWidth = w_in - 265;
 		minWidth = 50;
+		content_pad = ((maxWidth - 515) * 0.5) + 20;
 		
-		$("ul#resume_accordion li ul").css({"width":maxWidth - 60});
+		$("table.resume_content").css({"padding-left":content_pad});
 		$("#resume_accordion_sel").css({"width":maxWidth});
 
 		$("ul#resume_accordion li a").click(function() {

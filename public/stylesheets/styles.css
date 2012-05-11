@@ -176,12 +176,12 @@ a {
 
 #content_inside_wrapper {
 	background-color: #f3f2ea;
-	height: 550px;
+	height: 580px;
 }
 
 #content_inside {
 	display: block;
-	padding: 20px;
+	padding: 10px;
 }
 
 #content_inside p {
@@ -211,7 +211,7 @@ a {
 ul#resume_accordion {
 	list-style: none;
 	display: block;
-	margin-top: 30px;
+	margin-top: 20px;
 	margin-right: 5px;
 	margin-bottom: 10px;
 	margin-left: 15px;
@@ -227,7 +227,7 @@ ul#resume_accordion li a {
 	float: left;
 	overflow: hidden;
 	width: 50px;
-	height: 460px;
+	height: 530px;
 }
 
 ul#resume_accordion li img {
@@ -236,14 +236,15 @@ ul#resume_accordion li img {
 }
 
 table.resume_content {
-	margin-top: 5px;
+	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 10px;
-	padding-top: 20px;
+	padding-top: 0px;
 	padding-right: 10px;
 	padding-bottom: 10px;
-	width: 470px;
+	padding-left: 10px;
+	width: 485px;
 }
 
 table.resume_content th {
@@ -252,22 +253,34 @@ table.resume_content th {
 	font-weight: normal;
 	color: #3c2116;
 	text-align: left;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+table.resume_content tr, td {
+	font-size: 11pt;
+	width: auto;
 }
 
 table.resume_content td {
-	font-size: 11pt;
 	padding-left: 15px;
 	padding-bottom: 5px;
-	white-space: nowrap;
 }
 
 table.resume_content td.indent {
-	padding-left: 45px;
+	padding-left: 40px;
 }
 
 table.resume_content td.fit {
+	white-space: nowrap;
 	width: 1px;
+}
+
+table.resume_content td.top_align {
+	vertical-align: text-top;
+}
+
+table.resume_content td.more_margin {
+	padding-bottom: 15px;
 }
 
 /****** Footer ******/

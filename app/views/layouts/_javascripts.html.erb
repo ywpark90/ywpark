@@ -25,7 +25,7 @@
 		$("#footer p").css({"padding-left":section_pad + 45});
 	}
 
-	/* Code for resume accordion menu */
+	/* Render resume accordion menu */
 	function resumeAccordion() {
 		var w = $(window).width();
 		var w_in = (w < 1100) ? 780 : 
@@ -51,6 +51,7 @@
 		});
 	}
 
+	/* Load popup window */
 	function loadPopup() {
 		if (popupStatus == 0) {
 			$("#popupBackground").css({
@@ -62,6 +63,7 @@
 		}
 	}
 
+	/* Place popup window on center */
 	function centerPopup() {
 		var windowWidth = document.documentElement.clientWidth;
 		var windowHeight = document.documentElement.clientHeight;
@@ -79,6 +81,7 @@
 		});
 	}
 
+	/* Disable popup window */
 	function disablePopup() {
 		if (popupStatus == 1) {
 			$("#popupBackground").fadeOut("slow");
@@ -87,6 +90,7 @@
 		}
 	}
 	
+
 	$(document).ready(function() {
 		$("#popupClick").click(function() {
 			centerPopup();

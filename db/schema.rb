@@ -11,10 +11,4 @@
 # It's strongly recommended to check this file into your version control system.
 
 ActiveRecord::Schema.define(:version => 20120514072728) do
-
-  create_table "forms", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end

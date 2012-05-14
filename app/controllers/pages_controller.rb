@@ -22,12 +22,4 @@ class PagesController < ApplicationController
   def contact
  		@title_img_src = "contact/contact_title.png"
   end
-
-	def show_files
-		if verify_recaptcha(:message => "Wrong text")
-			return render :text => "valid"
-		else
-			return render :text => "no"
-		end
-	end
 end

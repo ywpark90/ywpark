@@ -4,7 +4,8 @@
 <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
 
 <script type="text/javascript">
-	
+	var popupStatus = 0;
+
 	/* When window is resized, adjust content section padding */
 	function contentPadding() {
 		var w = $(window).width();
@@ -49,8 +50,57 @@
 			$(this).attr('id', "resume_accordion_sel");
 		});
 	}
+
+	function loadPopup() {
+		if (popupStatus == 0) {
+			$("#popupBackground").css({
+				"opacity": "0.7"
+			});
+			$("#popupBackground").fadeIn("slow");
+			$("#popupWindow").fadeIn("slow");
+			popupStatus = 1;
+		}
+	}
+
+	function centerPopup() {
+		var windowWidth = document.documentElement.clientWidth;
+		var windowHeight = document.documentElement.clientHeight;
+		var popupHeight = $("#popupWindow").height();
+		var popupWidth = $("#popupWindow").width();
+
+		$("#popupWindow").css({
+			"position": "absolute",
+			"top": windowHeight/2-popupHeight/2,
+			"left": windowWidth/2-popupWidth/2,
+		});
+
+		$("#popupBackground").css({
+			"height": windowHeight
+		});
+	}
+
+	function disablePopup() {
+		if (popupStatus == 1) {
+			$("#popupBackground").fadeOut("slow");
+			$("#popupWindow").fadeOut("slow");
+			popupStatus = 0;
+		}
+	}
 	
 	$(document).ready(function() {
+		$("#popupClick").click(function() {
+			centerPopup();
+			loadPopup();
+		});
+		
+		$("#popupClose").click(function() {
+			disablePopup();
+		});
+
+		$("#popupBackground").click(function() {
+			disablePopup();
+		});
+
 		$(window).resize(function() {
 			contentPadding();
 			resumeAccordion();

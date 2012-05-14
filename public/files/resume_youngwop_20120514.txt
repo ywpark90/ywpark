@@ -1,0 +1,61 @@
+Young Woong Park
+117-18 Hyundai Villa #202, Samsung, Gangnam, Seoul
+Cell: +82.10.4288.2087 e-mail: ywpark90@gmail.com
+
++ EDUCATION
+
+- CARNEGIE MELLON UNIVERSITY Pittsburgh, PA
+  Master of Science in Electrical and Computer Engineering	December 2014
+  Bachelor of Science in Electrical and Computer Engineering	December 2013
+  Minor in Computer Science
+  Overall GPA: 3.92/4.00 Graduating in Four and a Half Years with M.S. Degree
+
++ RELEVANT COURSES
+
+- Embedded Real-Time Systems
+- Fundamental Data Structures and Algorithms
+- Noisy Signal Representation and Processing
+- Embedded Systems Design
+- Computer Graphics
+- Information Warfare
+
++ SKILLS
+
+- Programming Languages: C/Objective-C/C++/C#, Java, Assembly, OpenGL, Verilog, Ruby
+- Applications: Eclipse, MATLAB, Microsoft Office, Microsoft Visual Studio, Vim, Xcode
+- Operating Systems: Windows XP/Vista/7, Mac OS X, Red Hat Linux, UNIX
+
++ WORK EXPERIENCE
+
+- Amazon Corporate LLC Seattle, WA
+  Software Development Engineer Intern				May 2011 - August 2011	
+  Worked for Shelfari team in Kindle & Books Tech department.
+  Worked on optimizing Shelfari.com for mobile touch devices, mainly with C# and ASP.NET framework.
+	
+- Amazon Corporate LLC Seattle, WA
+  Software Development Engineer Intern				May 2010 - August 2010	
+  Worked for SmallParts team in Industrial & Scientific department.
+  Worked on generating feed for Amazon¡¯s Google advertisement program, promotions widget, 
+  and multiple images support in product detail page for SmallParts.com, mainly with Java, 
+  Apache Struts, and Spring framework.
+	
++ PROJECTS	
+
+- De-Mole-Lish!, Student Project (2chuck)			July 2010 - Present	
+  Developing an enhanced version of Whack-a-Mole game that runs on iOS 4 in a team of five students.
+  Improving open source game engine and adding contents of the game with Objective-C and OpenGL.
+	
+- Four Lokomotion, Embedded Systems Design			May 2011	
+  Implemented a rotating gaming device with four screens in a team of four students.
+  Implemented a Tetris game that runs on the device. Game on each screen can communicate with games 
+  on other screens via central microcontroller.
+
+- Real-Time Operating System, Embedded Real-Time Systems	November 2010	
+  Implemented a real-time kernel that allows tasks to run on Gumstix Verdex Pro board with 
+  ARM assembly language and C in a team of three students.
+  Implemented SWI and IRQ handlers, context switcher, mutexes with highest locker priority protocol, 
+  rate-monotonic task scheduling algorithm, and UB admission test.
+	
++ AWARDS
+
+- Dean¡¯s List, Carnegie Institute of Technology: Spring/Fall 2009, Fall 2010, Spring 2011

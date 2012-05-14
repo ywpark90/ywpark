@@ -184,10 +184,14 @@
 <div id="content_sectiontext">
 	<%= image_tag("resume/sectiontext.png", :alt => "Section Text",
 						 		:class => "icon") %>
-	<%= image_tag("content/pdf_logo.png", :alt => "PDF Logo",
-						 		:class => "icon") %>
-	<%= image_tag("content/word_logo.png", :alt => "WORD Logo",
-						 		:class => "icon") %>
+	<%= link_to(
+			image_tag("content/pdf_logo.png", 
+			:alt => "PDF Logo", :class => "icon", :target => '_blank'),
+			'/files/resume_youngwop_20120514.pdf') %>
+	<%= link_to(
+			image_tag("content/word_logo.png", 
+			:alt => "WORD Logo", :class => "icon", :target => '_blank'),
+			'/files/resume_youngwop_20120514.doc') %>
 	<%= image_tag("content/txt_logo.png", :alt => "TXT Logo",
 						 		:class => "icon") %>
 </div>

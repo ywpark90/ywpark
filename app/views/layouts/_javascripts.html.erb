@@ -33,9 +33,12 @@
 		lastBlock = $("#resume_accordion_sel");
 		maxWidth = w_in - 250;
 		minWidth = 50;
-		content_pad = ((maxWidth - 530) * 0.5) + 30;
+		tableWidth = (w_in <= 780) ? 485 : 
+								 ((w_in > 980) ? 685 : (w_in - 295));
+		content_pad = (w_in <= 980) ? 45 : (45 + (w_in - 980) * 0.5);
 		
-		$("table.resume_content").css({"margin-left":content_pad});
+		$("table.resume_content").css({"margin-left":content_pad,
+																	 "width":tableWidth});
 		$("#resume_accordion_sel").css({"width":maxWidth});
 
 		$("ul#resume_accordion li a").click(function() {

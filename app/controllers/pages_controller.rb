@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def resume
  		@title_img_src = "resume/resume_title.png"
+		@javascript_src = "layouts/javascripts_resume"
   end
 
   def projects

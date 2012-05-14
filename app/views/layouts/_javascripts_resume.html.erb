@@ -1,0 +1,94 @@
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+
+<script type="text/javascript">
+	var popupStatus = 0;
+
+	/* Render resume accordion menu */
+	function resumeAccordion() {
+		var w = $(window).width();
+		var w_in = (w < 1100) ? 780 : 
+								((w > 1400) ? 1080 : (780 + (w - 1100)));
+
+		lastBlock = $("#resume_accordion_sel");
+		maxWidth = w_in - 250;
+		minWidth = 50;
+		tableWidth = (w_in <= 780) ? 485 : 
+								 ((w_in > 980) ? 685 : (w_in - 295));
+		content_pad = (w_in <= 980) ? 45 : (45 + (w_in - 980) * 0.5);
+		
+		$("table.resume_content").css({"margin-left":content_pad,
+																	 "width":tableWidth});
+		$("#resume_accordion_sel").css({"width":maxWidth});
+
+		$("ul#resume_accordion li a").click(function() {
+			$(lastBlock).animate({width: minWidth+"px"}, { queue:false, duration:400 });
+			$(this).animate({width: maxWidth+"px"}, { queue:false, duration:400 });
+			$(lastBlock).removeAttr('id');
+			lastBlock = this;
+			$(this).attr('id', "resume_accordion_sel");
+		});
+	}
+
+	/* Load popup window */
+	function loadPopup() {
+		if (popupStatus == 0) {
+			$("#popupBackground").css({
+				"opacity": "0.7"
+			});
+			$("#popupBackground").fadeIn("slow");
+			$("#popupWindow").fadeIn("slow");
+			popupStatus = 1;
+		}
+	}
+
+	/* Place popup window on center */
+	function centerPopup() {
+		var windowWidth = document.documentElement.clientWidth;
+		var windowHeight = document.documentElement.clientHeight;
+		var popupHeight = $("#popupWindow").height();
+		var popupWidth = $("#popupWindow").width();
+
+		$("#popupWindow").css({
+			"position": "absolute",
+			"top": windowHeight/2-popupHeight/2,
+			"left": windowWidth/2-popupWidth/2,
+		});
+
+		$("#popupBackground").css({
+			"height": windowHeight
+		});
+	}
+
+	/* Disable popup window */
+	function disablePopup() {
+		if (popupStatus == 1) {
+			$("#popupBackground").fadeOut("slow");
+			$("#popupWindow").fadeOut("slow");
+			popupStatus = 0;
+		}
+	}
+
+	$(document).ready(function() {
+		$("#popupClick").click(function() {
+			centerPopup();
+			loadPopup();
+		});
+		
+		$("#popupClose").click(function() {
+			disablePopup();
+		});
+
+		$("#popupBackground").click(function() {
+			disablePopup();
+		});
+
+		$(window).resize(function() {
+			resumeAccordion();
+		});
+
+		resumeAccordion();
+	});
+</script>

@@ -5,6 +5,9 @@
   	<%= csrf_meta_tag %>
 		<%= render 'layouts/stylesheets' %>
 		<%= render 'layouts/javascripts' %>
+		<% if !@javascript_src.to_s.empty? %>
+			<%= render @javascript_src %>
+		<% end %>
 	</head>
 	<body>
 		<div id="wrapper">

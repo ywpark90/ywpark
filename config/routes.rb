@@ -7,6 +7,7 @@ Ywpark::Application.routes.draw do
   match '/blog', :to => 'pages#blog'
   match '/music', :to => 'pages#music'
   match '/contact', :to => 'pages#contact'
+	match '/show_files', :to => 'pages#show_files'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

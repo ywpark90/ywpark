@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def about
+	def about
  		@title_img_src = "about/about_title.png"
 	end
 
@@ -22,4 +22,12 @@ class PagesController < ApplicationController
   def contact
  		@title_img_src = "contact/contact_title.png"
   end
+
+	def show_files
+		if verify_recaptcha(:message => "Wrong text")
+			return render :text => "valid"
+		else
+			return render :text => "no"
+		end
+	end
 end

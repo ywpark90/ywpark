@@ -1,0 +1,97 @@
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var currentPosition = 0;
+		var slideWidth = 650;
+		var slides = $('.projects_slide');
+		var numberOfSlides = slides.length;
+
+		// Remove scrollbar
+		$('#projects_slidecontainer').css('overflow', 'hidden');
+
+		// Wrap all .projects_slide with #slideinner div
+		slides.wrapAll('<div id="slideinner"></div>')
+
+		// Float left to display horizontally
+		.css({
+			'float' : 'left',
+			'width' : slideWidth
+		});
+
+		// Set width
+		$('#slideinner').css('width', slideWidth * numberOfSlides);
+		$('#projects_statusbarinner').css('width', 50*numberOfSlides);
+
+		// Insert arrows
+		$('#projects_slideshow')
+			.prepend('<a class="control" id="leftcontrol">Move left</a>')
+			.append('<a class="control" id="rightcontrol">Move right</a>');
+
+		// Hide left arrow control on first load
+		manageControls(currentPosition);
+
+		// Create event listeners for status bar clicks
+		$('.projects_status').bind('click', function() {
+			// Determine new position
+			var idName = $(this).attr('id');
+			if (idName == 'slide1') {
+				currentPosition = 0;
+			} else if (idName == 'slide2') {
+				currentPosition = 1;
+			} else if (idName == 'slide3') {
+				currentPosition = 2;
+			}
+			
+			// Hide and show controls
+			manageControls(currentPosition);
+
+			// Move slideinner using margin-left
+			$('#slideinner').animate({
+				'marginLeft' : slideWidth * (-currentPosition)
+			});
+		});
+		
+		// Create event listeners for .controls clicks
+		$('.control').bind('click', function() {
+			// Determine new position
+			currentPosition = ($(this).attr('id') == 'rightcontrol')
+				? currentPosition + 1 : currentPosition - 1;
+
+			// Hide and show controls
+			manageControls(currentPosition);
+
+			// Move slideinner using margin-left
+			$('#slideinner').animate({
+				'marginLeft' : slideWidth * (-currentPosition)
+			});
+		});
+
+		function manageControls(position) {
+			// Hide left arrow if first slide
+			if (position == 0) { $('#leftcontrol').hide() }
+			else { $('#leftcontrol').show() }
+			
+			// Hide right arrow if last slide
+			if (position == numberOfSlides - 1) { $('#rightcontrol').hide() }
+			else { $('#rightcontrol').show() }
+
+			if (position == 0) {
+				$('#slide1').addClass('project_curstatus');
+				$('#slide2').removeClass('project_curstatus');
+				$('#slide3').removeClass('project_curstatus');
+			} else if (position == 1) {
+				$('#slide1').removeClass('project_curstatus');
+				$('#slide2').addClass('project_curstatus');
+				$('#slide3').removeClass('project_curstatus');
+			}	else if (position == 2) {
+				$('#slide1').removeClass('project_curstatus');
+				$('#slide2').removeClass('project_curstatus');
+				$('#slide3').addClass('project_curstatus');
+			}
+		}
+	});
+</script>

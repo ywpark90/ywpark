@@ -305,6 +305,102 @@ table.resume_content td.more_margin {
 	padding-bottom: 15px;
 }
 
+/****** Projects  ******/
+
+#projects_slideshow {
+	margin: 25px auto;
+	width: 750px;
+	height: 530px;
+	overflow: auto;
+	position: relative;
+}
+
+#projects_slidecontainer {
+	margin: 0px auto;
+	width: 650px;
+	height: 480px;
+	overflow: auto;
+	position: relative;
+}
+
+#projects_statusbar {
+	display: block;
+	margin: 10px auto;
+	width: 650px;
+	height: 30px;
+	overflow: auto;
+	position: relative;
+}
+
+#projects_statusbarinner {
+	display: block;
+	margin: 0px auto;
+	height: 30px;
+	overflow: auto;
+	position: relative;
+}
+
+a.projects_status {
+	display: block;
+	float: left;
+	width: 20px;
+	height: 10px;
+	text-indent: -10000px;
+	margin: 7px 15px 0px 15px;
+	background-color: #d9d6c7;
+	cursor: pointer;
+}
+
+a.project_curstatus {
+	background-color: #ea6a19;
+}
+
+.projects_slide {
+	margin: 0px auto;
+	width: 640px;
+	height: 480px;
+	float: left;
+}
+
+a.control {
+	display: block;
+	width: 50px;
+	height: 480px;
+	text-indent: -10000px;
+	position: absolute;
+	cursor: pointer;
+}
+
+a#leftcontrol {
+	top: 0;
+	left: 0;
+	background: transparent url("../images/projects/arrow_left.png") 
+		no-repeat center;
+}
+
+a#leftcontrol:hover {
+	top: 0;
+	left: 0;
+	background: transparent url("../images/projects/arrow_left.png") 
+		no-repeat center;
+	background-color: rgba(73, 76, 81, 0.5);
+}
+
+a#rightcontrol {
+	top: 0;
+	right: 0;
+	background: transparent url("../images/projects/arrow_right.png") 
+		no-repeat center;
+}
+
+a#rightcontrol:hover {
+	top: 0;
+	right: 0;
+	background: transparent url("../images/projects/arrow_right.png") 
+		no-repeat center;
+	background-color: rgba(73, 76, 81, 0.5);
+}
+
 /****** Footer ******/
 
 #footer {

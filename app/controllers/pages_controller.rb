@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def projects
  		@title_img_src = "projects/projects_title.png"
+		@javascript_src = "layouts/javascripts_projects"
   end
 
   def blog

@@ -4,6 +4,8 @@
 <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
 
 <script type="text/javascript">
+	var popupStatus = 0;
+	
 	$(document).ready(function() {
 		var currentPosition = 0;
 		var slideWidth = 650;
@@ -93,5 +95,46 @@
 				$('#slide3').addClass('project_curstatus');
 			}
 		}
+		
+		$(document).ready(function() {
+			$(".projects_popuplink").click(function() {
+				targetWindow = $(this).next();
+
+				if (popupStatus == 0) {
+					$("#popupBackground").css({
+						"opacity" : "0.7"
+					});
+
+					$("#popupBackground").fadeIn("slow");
+					targetWindow.fadeIn("slow");
+
+					popupStatus = 1;
+				}
+
+				var windowWidth = document.documentElement.clientWidth;
+				var windowHeight = document.documentElement.clientHeight;
+				var popupHeight = targetWindow.height();
+				var popupWidth = targetWindow.width();
+
+				targetWindow.css({
+					"position" : "absolute",
+					"top" : windowHeight/2-popupHeight/2-30,
+					"left" : 110+windowWidth/2-popupWidth/2
+				});
+
+				$("#popupBackground").css({
+					"height" : windowHeight
+				});
+			});
+
+			$("#popupBackground").click(function() {
+				if (popupStatus == 1) {
+					$("#popupBackground").fadeOut("slow");
+					$(".popupWindow").fadeOut("slow");
+					popupStatus = 0;
+				}
+			});
+		});
+
 	});
 </script>

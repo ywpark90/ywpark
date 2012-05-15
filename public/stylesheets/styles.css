@@ -65,24 +65,42 @@ a {
 	border-radius: 30px;
 }
 
+.round_small {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
 .hide {
 	display: none;
 }
 
-#popupWindow {
+.popupWindow {
 	display: none;
-	position: fixed;
+	position: fixed !important;
 	_position: absolute;
-	height: 400px;
-	width: 400px;
-	background: #FFF;
+	background: #f3f2ea;
 	z-index: 2;
 	padding: 10px;
 }
 
+.popupWindowContent {
+	width: auto;
+	height: auto;
+	margin: 30px;
+}
+
+.popupWindowContent h1 {
+	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
+	font-size: 24pt;
+	font-weight: normal;
+	color: #3c2116;
+	text-align: left;
+}
+
 #popupBackground {
 	display: none;
-	position: fixed;
+	position: fixed !important;
 	_position: absolute;
 	height: 100%;
 	width: 100%;
@@ -356,10 +374,20 @@ a.project_curstatus {
 }
 
 .projects_slide {
+	display: block;
 	margin: 0px auto;
+	width: 650px;
+	height: 480px;
+	float: left;
+}
+
+.projects_slidecontent {
+	display: block;
+	margin: 0px 5px;
 	width: 640px;
 	height: 480px;
 	float: left;
+	background-color: #9c9986;
 }
 
 a.control {
@@ -399,6 +427,66 @@ a#rightcontrol:hover {
 	background: transparent url("../images/projects/arrow_right.png") 
 		no-repeat center;
 	background-color: rgba(73, 76, 81, 0.5);
+}
+
+.projects_mainpic {
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 320px;
+	height: 480px;
+}
+
+.projects_maintext {
+	display: block;
+	float: right;
+	top: 0;
+	right: 0;
+	width: 290px;
+	margin: 0px 15px 10px;
+}
+
+.projects_maintext h1 {
+	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
+	font-size: 24pt;
+	font-weight: normal;
+	color: #3c2116;
+	text-align: left;
+}
+
+.projects_maintext p {
+	font-size: 11pt;
+}
+
+a.projects_popuplink:before {
+	content: url("../images/projects/logo_small.png") no-repeat center;
+}
+
+a.projects_popuplink {
+	display: block;
+	float: right;
+	width: 290px;
+	height: 30px;
+	margin: 7px 15px;
+	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
+	font-size: 20pt;
+	font-weight: normal;
+	text-align: left;
+	cursor: pointer;
+}
+
+a.projects_popuplink:hover {
+	color: #e4e4dc;
+	background-color: #494c51;
+}
+
+#projects_mainpic1 {
+	background: url("../images/projects/de-mole-lish!.png") no-repeat center;
+}
+
+#projects_mainpic2 {
+	background: url("../images/projects/four_lokomotion.png") no-repeat center;
 }
 
 /****** Footer ******/

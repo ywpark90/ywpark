@@ -98,6 +98,18 @@ a {
 	text-align: left;
 }
 
+.popupClose {
+	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
+	font-size: 18pt;
+	font-weight: normal;
+	color: #000;
+	display: block;
+	width: 50px;
+	margin: 10px auto;
+	position: relative;
+	cursor: pointer;
+}
+
 #popupBackground {
 	display: none;
 	position: fixed !important;
@@ -461,16 +473,17 @@ a#rightcontrol:hover {
 
 a.projects_popuplink:before {
 	content: url("../images/projects/logo_small.png") no-repeat center;
+	margin-right: 8px;
 }
 
 a.projects_popuplink {
 	display: block;
 	float: right;
 	width: 290px;
-	height: 30px;
+	height: 28px;
 	margin: 7px 15px;
 	font-family: 'BebasNeueRegular', Helvetica, sans-serif;
-	font-size: 20pt;
+	font-size: 19pt;
 	font-weight: normal;
 	text-align: left;
 	cursor: pointer;

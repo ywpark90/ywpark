@@ -134,6 +134,14 @@
 					popupStatus = 0;
 				}
 			});
+			
+			$(".popupClose").click(function() {
+				if (popupStatus == 1) {
+					$("#popupBackground").fadeOut("slow");
+					$(".popupWindow").fadeOut("slow");
+					popupStatus = 0;
+				}
+			});
 		});
 
 	});
